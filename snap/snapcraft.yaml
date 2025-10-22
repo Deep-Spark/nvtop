@@ -63,6 +63,7 @@ parts:
     - -DNVIDIA_SUPPORT=ON
     - -DAMDGPU_SUPPORT=ON
     - -DINTEL_SUPPORT=ON
+    - -DILUVATAR_SUPPORT=ON
     override-pull: |
       set -eux
       craftctl default

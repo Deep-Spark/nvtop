@@ -31,6 +31,7 @@ Table of Contents
   - [Apple](#apple)
   - [Ascend](#ascend) (only tested on 910B)
   - [VideoCore](#videocore)
+  - [Iluvatar](#iluvatar)
 - [Build](#build)
 - [Distribution Specific Installation Process](#distribution-specific-installation-process)
   - [Ubuntu / Debian](#ubuntu--debian)
@@ -143,6 +144,14 @@ On non-raspberry pi os, you need to use the `linux-rpi 6.12.y` kernel and above,
 NVTOP supports Rockchip (testing on orangepi 5 plus).
 
 Supports NPU frequency, temperature, utilization.
+
+### Iluvatar
+
+NVTOP supports Iluvatar (testing on BI-150).
+
+Supports GPU frequency, temperature, utilization, per-process utilization, GPU memory usage etc.
+
+For more information about GPUs please take a look at the [Iluvatar documentation](https://www.iluvatar.com/)
 
 Build
 -----
@@ -345,7 +354,7 @@ pixi global install nvtop
 ```bash
 git clone https://github.com/Syllo/nvtop.git
 mkdir -p nvtop/build && cd nvtop/build
-cmake .. -DNVIDIA_SUPPORT=ON -DAMDGPU_SUPPORT=ON -DINTEL_SUPPORT=ON
+cmake .. -DNVIDIA_SUPPORT=ON -DAMDGPU_SUPPORT=ON -DINTEL_SUPPORT=ON -DILUVATAR_SUPPORT=ON
 make
 
 # Install globally on the system
